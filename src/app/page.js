@@ -1,95 +1,73 @@
-import Image from "next/image";
+'use client' // next por default trabaja desde el lado del servidor y asi no me deja usar usestate... por eso con esta linea trabajo desde el lado del client
+
+
 import styles from "./page.module.css";
+import Game from "./game";
+import React from "react";
+import { useState, useEffect, useRef } from "react";
+
 
 export default function Home() {
+
+
+
+  const [ score, setEscore ] = useState(0)
+  const [ darkMode, setDark] = useState(true)
+
+  useEffect(()=>{
+    
+  }, [score])
+
+ let themeToggler = () => {
+    const currentState = darkMode;
+        setDark(!currentState );
+        document.getElementById("rules").style.display = "flex "
+        
+       document.getElementById("black").style.display = "flex" 
+      
+       
+  } /* esta fucntion se me dispara al darle click al boton , me hace cambiar el state theme, y por tanto la classname de ese div*/
+
+
+  let rulesoff = () => {
+    const currentState = darkMode;
+    setDark(!currentState );
+        document.getElementById("rules").style.display = "none"
+        document.getElementById("black").style.display = "none" 
+  } 
+
+
+
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <div className={ darkMode ? styles.light : styles.dark } id="darkMode"> {/* aqui estoy asignando una class name con base en un state que es theme, con la function themeToggler pasa de la classname light a dark */}
+      <header className={styles.header}>
+          <div>
+              <h2>ROCK</h2>
+              <h2>PAPER</h2>
+              <h2>SCISSORS</h2>
+              <h2>LIZARD</h2>
+              <h2>SPOCK</h2>
+          </div>
+          <div className={styles.score} >
+               <h3>SCORE</h3>
+               <h1> {score}</h1>
+          </div>
+      </header>
+      <section id="rules" className={styles.rules} style={{display : "none"}} >
+          <h3>RULES</h3>
+          <img className={styles.rulesimg}  src="/image-rules-bonus.svg" />
+          <img className={styles.rulesX}onClick={rulesoff} src="/icon-close.svg" />
+      </section>
+      <main>
+           < Game setEscore={setEscore} score={score}  /> 
+      </main>
+      <section style={{display : "none"}} className={styles.black} id="black">
+           <div  ></div>
+      </section> {/* pongo esta section para oscurecer todo la pantalla menos la parte de las reglas */}
+      <footer className={styles.footer}>
+          <button onClick={themeToggler}>RULES </button>
+      </footer>
+    </div>
   );
 }

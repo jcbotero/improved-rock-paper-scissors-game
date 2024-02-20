@@ -1,214 +1,733 @@
-.main {
-  display: flex;
-  flex-direction: column;
+
+
+.header {
+  display: inline-flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  width: 70%;
+  padding: 2% 4%;
+  color: white;
+  margin: 0% 15%;
+  font-size: 14px;
+  border: 0.1cm solid hsl(217, 16%, 45%);
+  border-radius: 10px;
+  line-height: 0.5cm;
+  z-index: 30;
+   position: relative;
 }
 
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
+.score {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.1rem 2.5rem;
 }
 
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+.score h3 {
+   color: hsl(229, 64%, 46%);
+   font-size: 20px;
+   margin-bottom: 25%;
 }
 
-.description p {
-  position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+.score h1 {
+  color: hsl(229, 25%, 31%);
+  margin-top: 12%;
+  font-size: 50px;
+  text-align: center;
 }
 
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
+.game {
+  background: url("/bg-pentagon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2% 5%;
+  height: 600px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  max-width: 100%;
-  width: var(--max-width);
+.game2{
+  background: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2% 5%;
+  height: 600px;
+
 }
 
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
+
+.mapeadas img {
+ background-color: #f1f1f1;
+ padding: 1.5%;
+ width: 110px;
+ height: 110px;
+ border-radius: 50%;
+ overflow: visible;
 }
 
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
+.img1{
+  border: 0.3cm solid hsl(39, 89%, 49%);
+  margin-left: 45.5%;
+  margin-top: 5%;
+  filter: drop-shadow(1px 6px 1px hsl(40, 94%, 35%)); /* asi añado sombra sombre un svg no sé sobre otras imágenes*/
 }
 
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-  text-wrap: balance;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
-}
-
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
-}
-
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
-}
-
-.center::before,
-.center::after {
-  content: "";
-  left: 50%;
+.img2{
+  border: 0.3cm solid hsl(189, 59%, 53%);
   position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
+  margin-left: 24%;
+  top: 410px;
+  filter: drop-shadow(1px 6px 1px hsl(189, 80%, 31%)); /* asi añado sombra sombre un svg no sé sobre otras imágenes*/
 }
 
-.logo {
+.img3{
+  border: 0.3cm solid hsl(261, 73%, 60%);
+ position: absolute;
+ margin-left: 42%;
+ top: 410px;
+ filter: drop-shadow(1px 6px 1px hsl(261, 68%, 36%)); /* asi añado sombra sombre un svg no sé sobre otras imágenes*/
+}
+
+.img4{
+  border: 0.3cm solid hsl(349, 71%, 52%);
+  position: absolute;
+  margin-left: 39%;
+  top: 600px;
+  filter: drop-shadow(1px 6px 1px hsl(348, 72%, 31%)); /* asi añado sombra sombre un svg no sé sobre otras imágenes*/
+}
+
+.img5{
+  border: 0.3cm solid hsl(230, 89%, 62%);
+  position: absolute;
+  margin-left: 26.5%;
+  top: 600px;
+  filter: drop-shadow(1px 6px 1px hsl(229, 53%, 31%)); /* asi añado sombra sombre un svg no sé sobre otras imágenes*/
+}
+
+.marcador img, .ganador img, .perdedor img, .ganador1 img, .perdedor1 img  {
+  background-color: #f1f1f1;
+  padding: 1%;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: visible;
+ }
+
+ .resultado{
+  display: inline-flex;
+  justify-content: center;
+  margin: 4% 0% 0% 0%;
+  
+
+ }
+
+ .marcador, .ganador, .perdedor, .ganador1, .perdedor1 {
+   margin: 2% 12%;
+   color: white;
+   text-align: center;
+   width: 100%;
+  
+ }
+
+.marcador h4, .ganador h4, .perdedor h4, .ganador1 h4, .perdedor1 h4 {
+  margin-bottom: 10%;
+  letter-spacing: 0.12cm;
+  font-size: 18px;
+}
+
+#elegida {
   position: relative;
-}
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .card:hover span {
-    transform: translateX(4px);
-  }
+  margin: 0%;
+  padding: 20%;
+  top: 0px;
 }
 
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
-  }
+#azar {
+  position: relative;
+  margin-left: 0%;
+  padding: 20%;
+  top: 0px;
 }
 
+.puntaje, .puntajeGanador, .puntajePerdedor {
+  display: flex;
+  min-width: 30%;
+  flex-direction: column;
+  text-align: center;
+  padding: 12% 0%;
+  margin: 0% 0%;
+}
+
+.puntaje h4, .puntajeGanador h4, .puntajePerdedor h4 {
+  color: #f1f1f1;
+  font-size: 45px;
+}
+
+.puntaje button, .puntajeGanador button, .puntajePerdedor button {
+   width: 60%;
+   height: 45px;
+   margin: 4% 20%;
+   border-radius: 10px;
+   letter-spacing: 0.07cm;
+   font-weight: 700;
+}
+
+.footer {
+  text-align: right;
+  margin-top: -5%;
+}
+
+.footer button {
+  border: 0.05cm solid white;
+  padding: 1%;
+  font-size: 18px;
+  letter-spacing: 0.07cm;
+  color: #f1f1f1;
+  font-weight: 700;
+  background: none;
+  width: 150px;
+  border-radius: 15px;
+
+}
+
+/* Dark section */
+
+.dark {
+  padding: 4rem 10rem 0rem 10rem;
+  position: relative;
+  z-index: 2;
+  background-image: linear-gradient( to bottom, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  min-height: 150%;
+ 
+}
+
+.light {
+  padding: 4rem 10rem 2rem 10rem;
+  position: relative;
+  background-image: linear-gradient( to bottom, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  color: #1d1d1d;
+  z-index: 2;
+  min-height: 150%;
+}
+
+
+.black {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
+  z-index: 20;
+}  /* este es el code para el div que me cubre toda la screen y me la oscurece*/
+
+
+.rules {
+  min-width: 45%;
+  height: 65%;
+  margin: 0% 16%;
+  position: absolute;
+  background-color: #f1f1f1;
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+}
+ 
+.rules H3 {
+   padding: 0% 0%;
+   margin: 0%;
+   font-size: 35px;
+   position: absolute;
+   text-align: left;
+}
+
+
+.rulesimg {
+  padding: 7% 7%;
+  margin-top: 4%;
+}
+
+.rulesX {
+  width: 30px;
+  height: 30px;
+  margin-top: 5%;
+}
+
+
+/* estilo cuando gana o pierde */
+
+.ganador {
+   padding: 13% ;
+   z-index: 1;
+   position: relative;
+   margin-top: -10%;
+   margin-left: -2%;
+  border-radius: 50%;
+  background-image: radial-gradient(  hsl(214, 44%, 17%) 50%  ,  hsl(216, 38%, 16%) 60%  , hsl(214, 49%, 20%) 30% , transparent 80%);
+ 
+} /* radial gradient sirve para difuminar fondo del el centro,, linear-gradient desde arriba o desde un lado
+   le pongo porcentajes para que me defina bordes en cada color */
+
+
+.perdedor {
+  padding: 13%;
+   z-index: 1;
+   position: relative;
+   margin-top: -10%;
+   margin-left: 0%;
+  border-radius: 50%;
+  background-image: radial-gradient(  hsl(214, 44%, 17%) 50%  ,  hsl(216, 38%, 16%) 60%  , hsl(214, 49%, 20%) 30% , transparent 80%);
+ 
+}
+
+.puntajeGanador {
+   margin-left: -13%;
+}
+
+.puntajePerdedor {
+   margin-left: -5%;
+}
+
+.perdedor1 {
+  margin-left: 5%;
+} 
+
+.ganador1 {
+  margin-left: 25%;
+}
+
+.img1:hover, .img2:hover, .img3:hover, .img4:hover, .img5:hover, .footer button:hover,.rulesX:hover, .puntaje button:hover {
+
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) and (max-width: 1349px) {
+ 
+
+}
+
+
+@media (min-width: 1350px) and (max-width: 1500px) {
+ 
+  .header {
+    width: 80%;
+    margin: 0% 10%;
+  }
+  
+  .game {
+    padding: 2% 2%;
+  }
+  
+  .game2{
+    padding: 2% 2%;
+   
+  }
+  
+  
+  .img1{
+    margin-top: 7%;
+  }
+  
+  .img2{
+    margin-left: 23%;
+  }
+  
+  .img3{
+   margin-left: 45%;
+  }
+  
+  .img4{
+    margin-left: 42%;
+  }
+  
+  .img5{
+    margin-left: 24.5%;
+  }
+  
+  
+  
+   .marcador, .ganador, .perdedor, .ganador1, .perdedor1 {
+     margin: 2% 6% ;
+   }
+  
+  
+  .puntaje, .puntajeGanador, .puntajePerdedor {
+    min-width: 40%;
+  }
+  
+  
+  
+  .footer {
+    margin-top: -4%;
+  }
+  
+  
+  
+  /* estilo cuando gana o pierde */
+  
+  .ganador {
+     margin-top: -10%;
+     margin-left: 5%;
+  
+  } /* radial gradient sirve para difuminar fondo del el centro,, linear-gradient desde arriba o desde un lado
+     le pongo porcentajes para que me defina bordes en cada color */
+  
+  
+  .perdedor {
+     margin-top: -10%;
+     margin-left: -4%;
+  }
+  
+  .puntajeGanador {
+     margin-left: -13%;
+  }
+  
+  .puntajePerdedor {
+     margin-left: -3%;
+  }
+  
+  .perdedor1 {
+    margin-left: 5%;
+  } 
+  
+  .ganador1 {
+    margin-left: 28%;
+  }
+  }
+  
+  
+@media (min-width: 1200px) and (max-width: 1349px) {
+  
+  .header {
+    width: 80%;
+    margin: 0% 10%;
+
+  }
+  
+  .game {
+    padding: 2% 2%;
+  }
+  
+  .game2{
+    padding: 2% 2%;
+   
+  }
+  
+  
+  .img1{
+    margin-top: 9%;
+  }
+  
+  .img2{
+    margin-left: 20%;
+  }
+  
+  .img3{
+   margin-left: 45%;
+  }
+  
+  .img4{
+    margin-left: 40%;
+  }
+  
+  .img5{
+    margin-left: 23.5%;
+  }
+  
+  
+  
+   .marcador, .ganador, .perdedor, .ganador1, .perdedor1 {
+     margin: 2% 5% ;
+   }
+  
+  
+  .puntaje, .puntajeGanador, .puntajePerdedor {
+    min-width: 40%;
+  }
+  
+  
+  
+  .footer {
+    margin-top: -6%;
+  }
+  
+  
+  
+  /* estilo cuando gana o pierde */
+  
+  .ganador {
+     margin-top: -10%;
+     margin-left: 0%;
+  
+  } /* radial gradient sirve para difuminar fondo del el centro,, linear-gradient desde arriba o desde un lado
+     le pongo porcentajes para que me defina bordes en cada color */
+  
+  
+  .perdedor {
+     margin-top: -10%;
+     margin-left: -4%;
+  }
+  
+  .puntajeGanador {
+     margin-left: -13%;
+  }
+  
+  .puntajePerdedor {
+     margin-left: -3%;
+  }
+  
+  .perdedor1 {
+    margin-left: 5%;
+  } 
+  
+  .ganador1 {
+    margin-left: 23%;
+  }
+
+}
+
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+ 
+
+}
+
+
+@media (min-width: 800px) and (max-width: 999px) {
+ 
+
+}
+
+
+@media (min-width: 601px) and (max-width: 799px) {
+ 
+
+}
 /* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
-  }
+@media (max-width: 600px) {
+  
 
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
-  }
-
-  .card {
-    padding: 1rem 2.5rem;
-  }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .center {
-    padding: 8rem 0 6rem;
-  }
-
-  .center::before {
-    transform: none;
-    height: 300px;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-  }
-
-  .description p {
-    align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
-  }
-
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
-  }
+.header {
+  width: 100%;
+  padding: 3% 4%;
+  margin: 0% 0%;
+  font-size: 10px;
 }
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
+.score {
+  padding: 1.1rem 2rem;
 }
+
+.score h3 {
+   font-size: 18px;
+}
+
+.score h1 {
+  margin-top: 12%;
+  font-size: 40px;
+}
+
+.game {
+  padding: 2% 0%;
+  width: 100%;
+}
+
+.game2{
+  padding: 2% 0%;
+  width: 100%;
+}
+
+
+.mapeadas img {
+ padding: 3%;
+ width: 90px;
+ height: 90px;
+}
+
+.img1{
+
+  margin-left: 38.5%;
+  margin-top: 22.5%;
+
+}
+
+.img2{
+  margin-left: 5%;
+  top: 410px;
+}
+
+.img3{
+ margin-left: 64%;
+ top: 400px;
+
+}
+
+.img4{
+  margin-left: 53%;
+  top: 590px;
+}
+
+.img5{
+  margin-left: 16.5%;
+  top: 590px;
+}
+
+.marcador img, .ganador img, .perdedor img, .ganador1 img, .perdedor1 img  {
+  width: 150px;
+  height: 150px;
+ }
+
+ .resultado{
+  display: inline-flex;
+  justify-content: center;
+  margin: 4% 0% 0% 0%;
+  
+ }
+
+ .marcador, .ganador, .perdedor, .ganador1, .perdedor1 {
+   margin: 2% 6%;
+ }
+
+.marcador h4, .ganador h4, .perdedor h4, .ganador1 h4, .perdedor1 h4 {
+  margin-bottom: 10%;
+  letter-spacing: 0.10cm;
+  font-size: 15px;
+  width: 100%;
+}
+
+#elegida {
+  position: relative;
+  margin: 14% 0% 0% 0%;
+  padding: 20%;
+  top: 0px;
+}
+
+#azar {
+  position: relative;
+  margin-left: 0%;
+  padding: 20%;
+  top: 0px;
+}
+
+.puntaje, .puntajeGanador, .puntajePerdedor {
+  min-width: 55%;
+  padding: 12% 0%;
+  margin: 45% 0% 0% 15%;
+  position: absolute;
+}
+
+.puntaje h4, .puntajeGanador h4, .puntajePerdedor h4 {
+  font-size: 50px;
+}
+
+.puntaje button, .puntajeGanador button, .puntajePerdedor button {
+   width: 80%;
+   margin: 4% 10%;
+}
+
+.footer {
+  text-align: center;
+  margin-top: -10%;
+  margin-bottom: 20%;
+}
+
+.footer button {
+  padding: 4%;
+  font-size: 18px;
+  width: 150px;
+  border-radius: 15px;
+
+}
+
+/* Dark section */
+
+.dark {
+  padding: 4rem 2rem 0rem 2rem;
+}
+
+.light {
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+
+.black {
+  height: 110%;
+}  /* este es el code para el div que me cubre toda la screen y me la oscurece*/
+
+
+.rules {
+  min-width: 80%;
+  height: 45%;
+  margin: 5% 5%;
+}
+ 
+.rules H3 {
+   padding: 4% 0%;
+   margin: 0%;
+   font-size: 28px;
+   text-align: center;
+}
+
+
+.rulesimg {
+  padding: 1% 4%;
+  margin-top: 14%;
+  width: 80%;
+  height: 80%;
+}
+
+.rulesX {
+  width: 30px;
+  height: 30px;
+  margin-top: 5%;
+}
+
+
+/* estilo cuando gana o pierde */
+
+.ganador {
+   padding: 13% ;
+   z-index: 1;
+   position: relative;
+   margin-top: -10%;
+   margin-left: -2%;
+  border-radius: 50%;
+  background-image: radial-gradient(  hsl(214, 44%, 17%) 50%  ,  hsl(216, 38%, 16%) 60%  , hsl(214, 49%, 20%) 30% , transparent 80%);
+ 
+} /* radial gradient sirve para difuminar fondo del el centro,, linear-gradient desde arriba o desde un lado
+   le pongo porcentajes para que me defina bordes en cada color */
+
+
+.perdedor {
+  padding: 13%;
+   z-index: 1;
+   position: relative;
+   margin-top: -10%;
+   margin-left: 0%;
+  border-radius: 50%;
+  background-image: radial-gradient(  hsl(214, 44%, 17%) 50%  ,  hsl(216, 38%, 16%) 60%  , hsl(214, 49%, 20%) 30% , transparent 80%);
+ 
+}
+
+.puntajeGanador {
+   margin-left: 0%;
+   
+}
+
+.puntajePerdedor {
+   margin-left: -5%;
+}
+
+.perdedor1 {
+  margin-left: 5%;
+  
+} 
+
+.ganador1 {
+  margin-left: 25%;
+}
+
+ 
+}
+
+
 
 @media (prefers-color-scheme: dark) {
   .vercelLogo {
